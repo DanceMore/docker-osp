@@ -51,27 +51,3 @@ jobs:
           file: ./OSP-Core/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
-
-      - name: Build & Push OSP-RTMP
-        uses: docker/build-push-action@v2
-        with:
-          context: ./OSP-RTMP
-          file: ./OSP-RTMP/Dockerfile
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
-
-      - name: Build & Push Ejabberd
-        uses: docker/build-push-action@v2
-        with:
-          context: ./Ejabberd
-          file: ./Ejabberd/Dockerfile
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
-
-      - name: Build & Push OSP-Edge
-        uses: docker/build-push-action@v2
-        with:
-          context: ./OSP-Edge
-          file: ./OSP-Edge/Dockerfile
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
